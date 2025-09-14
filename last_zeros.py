@@ -21,5 +21,5 @@ def is_prime(num):
 
 if __name__=="__main__":
     arr = [1,0,0,1,2,0,3,2]
-    # a = int(input("Enter the number : "))
+    a = int(input("Enter the number : "))
     print(last_zeros(arr))        
