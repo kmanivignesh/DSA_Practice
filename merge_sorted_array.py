@@ -8,13 +8,8 @@ def mearge_sorted_array(arr1,arr2):
         else:
             new_arr.append(arr2[j])
             j+=1
-    while i < len(arr1):
-        new_arr.append(arr1[i])
-        i+=1
-    while j < len(arr2):
-        new_arr.append(arr2[j])
-        j+=1
-
+    new_arr.extend(arr1[i:])
+    new_arr.extend(arr2[j:])
     return new_arr
 
 arr1 = [1,3,5,7]
