@@ -13,4 +13,4 @@ def longest_consecutive_seq(arr):
     return longest
 
 arr = [14 , 5 , 6 , 7 , 4 , 3, 2]
-print(longest_consecutive_seq(arr))     
+print(longest_consecutive_seq(arr))
