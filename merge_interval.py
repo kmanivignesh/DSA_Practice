@@ -1,19 +1,13 @@
-def merge_array(arr):
-    arr.sort(key = lambda x:x[0])
-    merge_array = []
-    merge_array.append(arr[0])
+def Merge_Interval(arr):
+    arr.sort(key = lambda x : x[0])
+    final_arr = []
+    final_arr.append(arr[0])
     for i in range(1 , len(arr)):
-        if merge_array[-1][-1] < arr[i][0]:
-            merge_array.append(arr[i])
+        if arr[i][0] <= final_arr[-1][-1]:
+            final_arr[-1][-1] = max(arr[i][-1] , final_arr[-1][-1])
         else:
-            merge_array[-1][-1] = max(arr[i][-1] , merge_array[-1][-1])
-    return merge_array        
+            final_arr.append(arr[i])
+    return final_arr
 
-
-interval = [[1 , 3] , [2 , 6] , [8 , 10] , [15 , 18]]
-print(merge_array(interval))
-
-
-    
-    
-        
+arr = [[8,10] , [13,16] , [2,5] , [0,3] , [4,6] , [10,11] ]
+print(Merge_Interval(arr))
