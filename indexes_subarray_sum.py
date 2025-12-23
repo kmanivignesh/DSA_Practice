@@ -6,10 +6,11 @@ def subarray_sum(arr , target):
     for j in range(1,len(arr)):
         
         while sum >= target:
-            sum -= arr[i]
-            i += 1
             if sum == target:
                 return i,j
+
+            sum -= arr[i]
+            i += 1
         sum+=arr[j]
     return -1
 
