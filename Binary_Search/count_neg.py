@@ -13,4 +13,4 @@ def count_neg_num(arr):
     return len(arr) - first_neg
 
 arr = [4,3,2,-1 , -2]
-print(count_neg_num(arr))            
+print(count_neg_num(arr))           
