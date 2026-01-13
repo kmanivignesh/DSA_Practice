@@ -2,6 +2,7 @@ class Node:
     def __init__(self , data):
         self.value = data
         self.next = None
+        
 class LinkedList:
     def __init__(self):
         self.head = None
@@ -50,6 +51,15 @@ class LinkedList:
                 temp = temp.next
             print("The length of the linked list is ",count)   
 
+    def find_middle(self):
+        slow_pointer = self.head
+        fast_pointer = self.head
+        while fast_pointer.next is not None:
+            fast_pointer = fast_pointer.next.next
+            slow_pointer = slow_pointer.next
+        print(slow_pointer.value)    
+
+        
                      
 
 
@@ -57,9 +67,6 @@ l1 = LinkedList()
 l1.add_node(30)
 l1.add_node(40)
 l1.add_node(50) 
-l1.find_length()  
 l1.print_ll()
-l1.delete_node()
-l1.print_ll()
-l1.find_length()
+l1.find_middle()
 
