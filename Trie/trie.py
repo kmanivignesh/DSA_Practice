@@ -43,11 +43,7 @@ class Trie:
                 dfs(node , word + i , result)
 
         dfs(curr , word , result)
-        return result  
-
-                  
-
-
+        return result 
 
 
 trie = Trie()
